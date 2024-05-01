@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Monserrat;
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf')format("truetype");
+    font-display: swap;
+  }
+
+  html {
+    font-family: "Monserrat", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-filled {
+    @apply text-lg font-medium text-snow hover:cursor-pointer;
+    @apply bg-secondary px-8 py-2 rounded-full;
+    @apply hover:bg-primary duration-150
+  }
+  .btn-filled-no-hover {
+    @apply text-lg font-medium text-snow text-center justify-center hover:cursor-pointer;
+    @apply bg-secondary px-8 py-2 rounded-full items-center;
+  }
+}
+
+
+/*--------------header*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(to right, #160101,  #e20404);
+  box-shadow: 0 4px 41px rgba(14, 55, 54, 0.14);
+  transition: 0.2s;
+  padding: 10px 10%;
+}
+
+
+.nav__list a:hover{
+    background-color: #ffffff;
+    color: rgb(221, 3, 3);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.nav__link {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.btn-filleds{
+  font-size: 22px;
+  padding: 5px;
+  color: #ffffff;
+  border: 2px solid white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+.home {
+  position: relative;
+  height: 100vh;
+  background-image: url('../assets/lla2.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.home__container {
+  z-index: 1;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ff0707 white;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #dd0606;
+  border-radius: 10px;
+  border: 3px solid white;
+}

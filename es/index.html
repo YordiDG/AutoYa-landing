@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="MoniTech" />
+  <title>Favore</title>
+  <meta name="keywords"
+    content="favore, freelancer, freelance jobs, hire people, hire services, find help, local help, errands, chores, projects, cleaning, organizing, handyman work, pet care, tutoring, education, tech, art">
+  <meta name="description"
+    content="Favore es una plataforma que te conecta con personas locales que pueden ayudarte con tus recados, tareas y proyectos. Encuentre ayuda con todo, desde limpieza y organización hasta trabajos de mantenimiento y cuidado de mascotas. Literalmente hay gente disponible para cualquier cosa que necesites.">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/tailwind.min.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+  <main>
+    <nav class="sticky top-0 bg-snow drop-shadow-lg">
+      <div class="flex px-6 py-4 place-content-between container mx-auto">
+        <img src="../assets/favore-logo.png" alt="Favore logo" class="h-16 hover:scale-95 duration-200" />
+        <ul class="hidden lg:flex gap-8 items-center">
+          <li class="font-medium text-lg hover:text-primary hover:scale-95 hover:cursor-pointer duration-200">
+            <a id="how-it-works-link">
+              Cómo funciona
+            </a>
+          </li>
+          <li class="font-medium text-lg hover:text-primary hover:scale-95 hover:cursor-pointer duration-200">
+            <a id="reviews-link">
+              Testimonios
+            </a>
+          </li>
+          <li class="font-medium text-lg hover:text-primary hover:scale-95 hover:cursor-pointer duration-200">
+            <a id="about-link">
+              Acerca de
+            </a>
+          </li>
+          <li class="font-medium text-lg hover:text-primary hover:scale-95 hover:cursor-pointer duration-200">
+            <a id="download-link">
+              Descargar
+            </a>
+          </li>
+          <li class="btn-filled">
+            <a id="become-favorer-button">
+              Aplicar a Favorer
+            </a>
+          </li>
+          <li>
+            <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar"type="button">
+              <ion-icon name="language" class="text-4xl text-black"></ion-icon>
+            </button>
+            <div id="dropdownAvatar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+                <li>
+                  <a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Inglés</a>
+                </li>
+                <li>
+                  <a href="es" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Español</a>
+                </li>
+                <li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="lg:hidden flex items-center">
+          <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+            aria-controls="drawer-navigation">
+            <ion-icon class="text-5xl" name="menu"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div id="drawer-navigation"
+      class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+      tabindex="-1" aria-labelledby="drawer-navigation-label">
+      <h5 id="drawer-navigation-label" class="font-bold uppercase">
+        Favore
+      </h5>
+      <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+        class="bg-transparent text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center">
+        <ion-icon class="text-5xl" name="close"></ion-icon>
+      </button>
+      <ul class="space-y-6 mt-6">
+        <li class="font-medium text-xl">
+          <a href="#how-it-works-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="reader"></ion-icon>
+            Cómo funciona
+          </a>
+        </li>
+        <li class="font-medium text-xl">
+          <a href="#reviews-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="sparkles"></ion-icon>
+            Testimonios
+          </a>
+        </li>
+        <li class="font-medium text-xl">
+          <a href="#about-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="reader"></ion-icon>
+            Acerca de
+          </a>
+        </li>
+        <li class="font-medium text-xl">
+          <a href="#download-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="download"></ion-icon>
+            Descargar
+          </a>
+        </li>
+        <li class="font-semibold text-xl text-primary">
+          <a href="#become-favorer-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="briefcase"></ion-icon>
+            Aplicar a Favorer
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section id="hero-section"
+      class="bg-[url('../assets/hero-background.png')] bg-cover h-[820px] flex justify-center items-center">
+      <div class="container mx-auto lg:flex-col p-12 lg:grid lg:grid-cols-2">
+        <div class="text-center lg:text-left box-border lg:pr-32 flex flex-col items-center lg:items-start">
+          <p class="text-5xl md:text-6xl font-bold lg:text-left" style="line-height: 1.2;">
+            <span class="text-secondary">Obtén ayuda</span><br />Con cualquier cosa<br />En cualquier lugar<br />En cualquier momento
+          </p>
+          <p class="text-2xl my-6 font-medium">
+            ¿Hacer recados, tareas domésticas, dar clases particulares a su sobrino o tal vez desarrollar un proyecto? Te tenemos cubierto.
+          </p>
+          <div class="flex items-center lg:items-start">
+            <a href="" title="Download Favore in Google Play Store">
+              <img src="../assets/google-play-badge.png" alt="Google Play Badge"
+                class="h-16 w-auto hover:scale-95 duration-200" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works-section">
+      <div class="container mx-auto py-32 px-8 md:px-48">
+        <div class="flex gap-8 md:gap-20 items-center justify-center">
+          <img src="../assets/client-demo.png" alt="How it works image" class="hidden lg:block w-72">
+          <div class="grid gap-12">
+            <h1 class="text-primary font-bold text-4xl md:text-5xl text-center md:text-start">¿Qué es Favore?</h1>
+            <p class="text-justify text-xl">Favore conecta a las personas con favorecedores para cualquier tarea, incluidas las tareas del hogar, compras, mudanzas, limpieza, cuidado de niños, tutoría, asistencia general, creación de proyectos y muchas más.</p>
+            <ul class="text-lg grid gap-4">
+              <li class="flex items-center gap-4"><ion-icon size="large" name="checkmark"></ion-icon>Favore es un manera conveniente de obtener ayuda con cualquier cosa que puedas imaginar</li>
+              <li class="flex items-center gap-4"><ion-icon size="large" name="checkmark"></ion-icon>Encuentra local o favores remotos dependiendo de sus necesidades</li>
+              <li class="flex items-center gap-4"><ion-icon size="large" name="checkmark"></ion-icon>Chatear, dar propinas y revisa tu favorito todo en la misma plataforma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-secondary-light">
+        <div class="container mx-auto py-16 px-8">
+          <div class="grid lg:flex gap-16 text-center justify-between">
+            <div class="flex flex-col gap-8 items-center justify-center">
+              <h1 class="font-semibold text-2xl">1. Encuentra un <span class="text-contrast font-bold">Favorer</span>
+              </h1>
+              <img src="../assets/works-1.png" alt="Search for a Favorer image" class="h-56 w-56 object-cover" />
+              <p class="text-xl">Elija entre una variedad de favoritos con diferentes habilidades y niveles de experiencia.</p>
+            </div>
+            <div class="flex flex-col gap-8 items-center justify-center">
+              <h1 class="font-semibold text-2xl">2. Contrata y chatea con el <span
+                  class="text-contrast font-bold">Favorer</span></h1>
+              <img src="../assets/works-2.png" alt="Search for a Favorer image" class="h-56 w-56 object-cover" />
+              <p class="text-xl">Contacta con el Favorer y dale detalles sobre tus necesidades. Chatea y mira el progreso, todo en la misma plataforma</p>
+            </div>
+            <div class="flex flex-col gap-8 items-center justify-center">
+              <h1 class="font-semibold text-2xl">3. Califica al <span class="text-contrast font-bold">Favorer</span>
+              </h1>
+              <img src="../assets/works-3.png" alt="Search for a Favorer image" class="h-56 w-56 object-cover" />
+              <p class="text-xl">Revisar tu Favorer ayudará a otros. ¡Deja comentarios sobre tu experiencia!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="available-countries-section">
+      <div class="container mx-auto px-8 py-20">
+        <div class="lg:flex flex-row gap-8 md:gap-20 items-start justify-center">
+          <div class="flex flex-col items-center">
+            <div class="grid gap-2 py-8 text-center md:text-start">
+              <h1 class="text-4xl md:text-5xl font-bold text-primary">Países disponibles</h1>
+              <p class="text-xl">Estamos trabajando para traer Favore al mundo.</p>
+            </div>
+            <img src="../assets/globe.png" alt="How it works image" class="hidden lg:block h-64 w-auto">
+          </div>
+          <div class="flex gap-8 md:gap-24 items-center md:items-start justify-center">
+            <div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover text-center">América del sur</h1>
+                <ul class="text-xl text-center">
+                  <li>Perú</li>
+                  <li>Chile</li>
+                  <li>Bolivia</li>
+                  <li>Argentina</li>
+                  <li>Brasil</li>
+                </ul>
+              </div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">América del norte</h1>
+                <ul class="text-xl text-center">
+                  <li>Canadá</li>
+                  <li>México</li>
+                  <li>Estados Unidos</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">Europa</h1>
+                <ul class="text-xl text-center">
+                  <li>Francia</li>
+                  <li>Alemania</li>
+                  <li>Italia</li>
+                  <li>España</li>
+                </ul>
+              </div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">África</h1>
+                <p class="text-xl text-center">Pronto</p>
+              </div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">Asia</h1>
+                <p class="text-xl text-center">Pronto</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="reviews-section" class="bg-secondary-light">
+      <div class="container mx-auto px-8 py-20">
+        <div class="grid gap-2 text-center lg:text-start">
+          <h1 class="text-4xl md:text-5xl font-bold text-primary">Lo que dicen nuestros usuarios</h1>
+          <p class="text-xl">Favore siempre estará ahí cuando necesites una mano</p>
+        </div>
+        <div class="hidden lg:grid lg:grid-cols-2 gap-8 mt-16">
+          <div id="user-review" class="flex gap-8 md:py-4">
+            <img src="../assets/user-1.png" alt="Reviewer profile picture" class="h-16" />
+            <div>
+              <div class="flex gap-4 items-center">
+                <h1 class="text-xl font-bold">Jhon Nick</h1>
+                <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+              <p>"¡Necesitaba ayuda para ensamblar algunos muebles y Favore fue un salvavidas! El tasker fue muy profesional y eficiente, y el trabajo se realizó en poco tiempo. Definitivamente usaría Favore nuevamente."</p>
+            </div>
+          </div>
+          <div id="user-review" class="flex gap-8 md:py-4">
+            <img src="../assets/user-3.png" alt="Reviewer profile picture" class="h-16" />
+            <div>
+              <div class="flex gap-4 items-center">
+                <h1 class="text-xl font-bold">Susan Jones</h1>
+                <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+              <p>"El tasker hizo un gran trabajo limpiando mi casa y quedé muy contento con los resultados. Definitivamente usaría Favore nuevamente."</p>
+            </div>
+          </div>
+          <div id="user-review" class="flex gap-8 md:py-4">
+            <img src="../assets/user-2.png" alt="Reviewer profile picture" class="h-16" />
+            <div>
+              <div class="flex gap-4 items-center">
+                <h1 class="text-xl font-bold">Mary Brown</h1>
+                <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+              <p>"Estaba teniendo problemas con mi computadora y necesitaba ayuda para solucionar el problema. Publiqué una tarea en Favore y en cuestión de minutos varios taskers se comunicaron conmigo. Terminé contratando a uno de ellos y pudieron arreglar mi computadora en poco tiempo. Quedé muy contento con el servicio y definitivamente usaría Favore nuevamente."</p>
+            </div>
+          </div>
+          <div id="user-review" class="flex gap-8 md:py-4">
+            <img src="../assets/user-4.png" alt="Reviewer profile picture" class="h-16" />
+            <div>
+              <div class="flex gap-4 items-center">
+                <h1 class="text-xl font-bold">David Williams</h1>
+                <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+              <p>"Estaba celebrando una fiesta y necesitaba ayuda para prepararla y limpiarla. Publiqué una tarea en Favore y en cuestión de minutos varios taskers se comunicaron conmigo. Terminé contratando algunos Taskers y todos fueron muy serviciales y eficientes. La fiesta fue un éxito y quedé muy contento con el servicio."</p>
+            </div>
+          </div>
+        </div>
+        <div id="default-carousel" class="relative w-full lg:hidden" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-[400px] overflow-hidden rounded-lg">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div id="user-review"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                <div class="flex flex-col items-center text-center py-4">
+                  <img src="../assets/user-1.png" alt="Reviewer profile picture" class="h-16" />
+                  <h1 class="text-xl font-bold">Jhon Nick</h1>
+                  <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="text-center text-lg">"¡Necesitaba ayuda para ensamblar algunos muebles y Favore fue un salvavidas! El encargado de la tarea fue muy profesional y eficiente, y el trabajo se realizó en poco tiempo. Definitivamente usaría Favore nuevamente."</p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div id="user-review"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                <div class="flex flex-col items-center text-center py-4">
+                  <img src="../assets/user-2.png" alt="Reviewer profile picture" class="h-16" />
+                  <h1 class="text-xl font-bold">Mary Brown</h1>
+                  <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="text-center text-lg">"Estaba celebrando una fiesta y necesitaba ayuda para prepararla y limpiarla. Publiqué una tarea en Favore y en cuestión de minutos varios taskers se comunicaron conmigo. Terminé contratando algunos Taskers y todos fueron muy serviciales y eficientes. La fiesta fue un éxito y quedé muy contento con el servicio."</p>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div id="user-review"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                <div class="flex flex-col items-center text-center py-4">
+                  <img src="../assets/user-3.png" alt="Reviewer profile picture" class="h-16" />
+                  <h1 class="text-xl font-bold">Susan Jones</h1>
+                  <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="text-center text-lg">"Estaba teniendo problemas con mi computadora y necesitaba ayuda para solucionar el problema. Publiqué una tarea en Favore y en cuestión de minutos varios taskers se comunicaron conmigo. Terminé contratando a uno de ellos y pudieron arreglar mi computadora en un abrir y cerrar de ojos. Estaba muy contento con el servicio y definitivamente usaría Favore nuevamente."</p>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div id="user-review"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                <div class="flex flex-col items-center text-center py-4">
+                  <img src="../assets/user-4.png" alt="Reviewer profile picture" class="h-16" />
+                  <h1 class="text-xl font-bold">David Williams</h1>
+                  <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                    <ion-icon name="star" size="large"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="text-center text-lg">"El tasker hizo un gran trabajo limpiando mi casa y quedé muy contento con los resultados. Definitivamente usaría Favore nuevamente."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about-section">
+      <div class="container mx-auto grid md:grid-cols-2 px-8 py-20 items-start">
+        <div class="items-center justify-center text-center py-8">
+          <div class="space-y-6">
+            <div>
+              <h1 class="font-bold text-3xl lg:text-4xl text-primary">Acerca del Producto</h1>
+              <p class="text-lg">
+                ¡Mira lo que <span class="text-contrast font-bold">Favore</span> ofrece!
+              </p>
+            </div>
+              <iframe class="w-full h-36 lg:h-96 px-8 lg:px-20"
+              src="https://www.youtube.com/embed/nXqCk2zXP9Y?si=aLeFjg0sBprMkRSy"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="items-center justify-center text-center py-8">
+          <div class="space-y-6">
+            <div>
+              <h1 class="font-bold text-3xl lg:text-4xl text-primary">Acerca del Team</h1>
+              <p class="text-lg">
+                Echa un vistazo a nuestra organización en Github 
+                <a class="text-contrast font-bold underline"
+                  href="https://github.com/MoniTech-upc-pre-202302-cc238-wv61" target="_blank">MoniTech</a>
+              </p>
+            </div>
+            <div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://upcedupe-my.sharepoint.com/personal/u20201e987_upc_edu_pe/_layouts/15/embed.aspx?UniqueId=8d086189-b1be-4dfc-aba4-5cb345adf892&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Monitech-Favore About the Team.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download-section">
+      <section class="bg-white py-12">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-20 py-5">
+          <div class="md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
+            <img src="../assets/freelancer-demo.png" alt="ready image"
+              class="w-72 mx-auto max-w-full rounded-lg mb-4 md:mb-0" />
+          </div>
+          <div class="md:w-1/2 text-center md:text-left md:pr-8">
+            <h2 class="text-4xl font-bold mb-4 text-primary">
+              ¿Listo para empezar?
+            </h2>
+            <p class="text-lg mb-6">
+              Comience ahora a buscar tareas locales o remotas. ¡Disponible cuando lo necesites!
+            </p>
+            <ul class="list-none list-inside font-semibold">
+              <li class="mb-2 flex items-center">
+                <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                  </path>
+                </svg>
+                Amplia variedad de categorías
+              </li>
+              <li class="mb-2 flex items-center">
+                <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                  </path>
+                </svg>
+                Favorers de todo el mundo
+              </li>
+              <li class="mb-2 flex items-center">
+                <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                  </path>
+                </svg>
+                Reseñas y comentarios de Favorers
+              </li>
+              <li class="mb-2 flex items-center">
+                <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                  </path>
+                </svg>
+                Chat en plataforma
+              </li>
+              <li class="mb-2 flex items-center">
+                <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                  </path>
+                </svg>
+                Atención al cliente las 24 horas
+              </li>
+            </ul>
+            <a href="#">
+              <div class="flex items-center justify-center">
+                <img src="../assets/google-play-badge.png" alt="Google Play Store Badge"
+                  class="h-16 w-auto mx-auto md:ml-0 hover:scale-95 duration-200 py-2" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="become-favorer-section">
+      <section class="bg-secondary-light py-12">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-20 py-5">
+          <div class="md:w-1/2 text-center md:text-left md:pr-8">
+            <h2 class="text-4xl font-bold mb-4 text-primary">
+              ¡Aplica a ser Favorer!
+            </h2>
+            <p class="text-lg mb-6">
+              ¡Descarga la aplicación y regístrate para postularte y convertirte en un Favorer! Comience a ganar ofreciendo un servicio que pueda brindar.<br />
+              <a class="text-contrast underline" href="">Términos y condiciones.</a>
+            </p>
+            <a href="#">
+              <div class="flex items-center justify-center">
+                <img src="../assets/google-play-badge.png" alt="Google Play Store Badge"
+                  class="h-16 w-auto mx-auto md:ml-0 hover:scale-95 duration-200 py-2" />
+              </div>
+            </a>
+          </div>
+          <div class="md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
+            <img src="../assets/become-favorer-image.png" alt="favorer image"
+              class="w-full mx-auto max-w-full h-auto rounded-lg" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="text-black py-12 px-20">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-1">
+            <img src="../assets/favore-logo.png" alt="Favore logo" class="h-16" />
+          </div>
+          <div class="md:col-span-1 font-medium">
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#about-section">Acerca del Producto</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#about-section">Acerca del Team</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#how-it-works-section">Cómo funciona</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#available-countries-section">Países disponibles</a>
+            </div>
+          </div>
+          <div class="md:col-span-1 font-medium">
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#reviews-section">Testimonios</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#download-section">Descargar</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#become-favorer-section">Aplica a Favorer</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#">Términos y Condiciones</a>
+            </div>
+          </div>
+          <div class="md:col-span-1">
+            <p class="mb-4">
+              <span class="font-bold text-primary">DESCARGAR FAVORE</span>
+              <br />
+              <span class="font-medium">
+                Disponible en Google Play Store, disponible próximamente en App Store.
+              </span>
+              <a class="text-contrast underline" href="">Manténte al día con las actualizaciones</a>
+            </p>
+            <a href="#">
+              <img src="../assets/google-play-badge.png" alt="Google Play Store Badge"
+              class="h-16 w-auto hover:scale-95 duration-200 py-2" />
+            </a>
+            <div class="mb-4 font-bold">¡Síguenos!</div>
+            <div class="flex space-x-4">
+              <a href="#"><img class="h-8" src="../assets/facebook-logo.png" alt="Facebook" /></a>
+              <a href="#"><img class="h-8" src="../assets/twitter-logo.png" alt="Twitter" /></a>
+              <a href="#"><img class="h-8" src="../assets/instagram-logo.png" alt="Instagram" /></a>
+              <a href="#"><img class="h-8" src="../assets/youtube-logo.png" alt="Youtube" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="../scripts/navigation.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

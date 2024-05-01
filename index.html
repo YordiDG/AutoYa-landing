@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="NewMinds" />
+  <title>AutoYa</title>
+  <meta name="keywords"
+  content="auto rental, car rental, hire cars, vehicle rental, rent a car">
+  <meta name="description"
+    content="Autoya is a platform that connects you with local people who can help you with your car rental needs. Find help with everything from finding the perfect car for your trip to arranging pickup and drop-off services. Whether you need a vehicle for a short trip or an extended adventure, Autoya has you covered.">
+  <link rel="shortcut icon" href="./assets/favico.ico.png" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tailwind.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <nav class="sticky top-0 bg-snow drop-shadow-lg header">
+      <div class="flex px-6 py-4 place-content-between nav container mx-auto">
+        <img src="./assets/car2.png" alt="Favore logo" width="100px" height="auto" class="h-16 hover:scale-95 duration-200" />
+        <ul class="hidden lg:flex gap-8 items-center nav__list">
+            <li class="font-medium text-lg  hover:scale-95 hover:cursor-pointer duration-200">
+                <a id="how-it-works-link" class="nav__link">
+                    <span >How it works</span>
+                </a>
+            </li>
+            <li class="font-medium text-lg  hover:scale-95 hover:cursor-pointer duration-200">
+                <a id="reviews-link" class="nav__link">
+                    <span >Reviews</span>
+                </a>
+            </li>
+            <li class="font-medium text-lg  hover:scale-95 hover:cursor-pointer duration-200">
+                <a id="about-link" class="nav__link">
+                    <span >About</span>
+                </a>
+            </li>
+            <li class="font-medium text-lg  hover:scale-95 hover:cursor-pointer duration-200">
+                <a id="download-link" class="nav__link">
+                    <span >Download</span>
+                </a>
+            </li>
+            <li class="btn-filled">
+                <a id="become" >
+                    <span >Become AutoYa</span>
+                </a>
+            </li>
+          
+        </ul>    
+        <div class="lg:hidden flex items-center">
+          <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+            aria-controls="drawer-navigation">
+            <ion-icon class="text-5xl" name="menu"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div id="drawer-navigation"
+      class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+      tabindex="-1" aria-labelledby="drawer-navigation-label">
+      <h5 id="drawer-navigation-label" class="font-bold uppercase">
+        Favore
+      </h5>
+      <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+        class="bg-transparent text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center">
+        <ion-icon class="text-5xl" name="close"></ion-icon>
+      </button>
+      <ul class="space-y-6 mt-6">
+        <li class="font-medium text-xl">
+          <a href="#how-it-works-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="reader"></ion-icon>
+            How it works
+          </a>
+        </li>
+        <li class="font-medium text-xl">
+          <a href="#reviews-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="sparkles"></ion-icon>
+            Reviews
+          </a>
+        </li>
+        <li class="font-medium text-xl">
+          <a href="#about-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="reader"></ion-icon>
+            About
+          </a>
+        </li>
+        <li class="font-medium text-xl">
+          <a href="#download-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="download"></ion-icon>
+            Download
+          </a>
+        </li>
+        <li class="font-semibold text-xl text-primary">
+          <a href="#become-favorer-section" class="flex items-center gap-2" data-drawer-hide="drawer-navigation">
+            <ion-icon name="briefcase"></ion-icon>
+            Become Favorer
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section id="hero-section"
+      class=" home bg-cover h-[820px] flex justify-center items-center">
+      <div class="container mx-auto lg:flex-col p-12 lg:grid lg:grid-cols-2">
+        <div class="text-center home__container  lg:text-left box-border lg:pr-32 flex flex-col items-center lg:items-start">
+          <p class="text-5xl md:text-6xl font-bold lg:text-left" style="line-height: 1.2;">
+            <h1 style="color: white; font-weight: bold; font-size: 30px ;margin-top: 55%;  font-family: 'Montserrat', sans-serif;">
+              CONNECT WITH US <br>
+              TODAY AND LET'S <br>
+              REDEFINE YOUR RENTAL <br>
+              JOURNEY TOGETHER!
+          </h1>
+          </p>
+          <p class="text-2xl my-6 font-medium" style="color: red;">
+            Looking to rent a car for your next trip? We've got you covered!
+          </p>
+          <div class="flex items-center lg:items-start">
+            <a href="" title="Download Favore in Google Play Store">
+              <img src="./assets/google-play-badge.png" alt="Google Play Badge"
+                class="h-16 w-auto hover:scale-95 duration-200" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works-section">
+      <div class="container mx-auto py-32 px-8 md:px-48">
+        <div class="flex gap-8 md:gap-20 items-center justify-center">
+          <img src="./assets/cdl.png" " alt="How it works image" class="hidden lg:block w-72 border">
+          <div class="grid gap-12">
+            <h1 class="text-primary font-bold text-4xl md:text-5xl text-center md:text-start">What is AutoYa?</h1>
+              <p class="text-justify text-xl">Autoya connects you with reliable car rental services for your every need, whether it's a weekend getaway, a business trip, or daily commuting.</p>
+              <ul class="text-lg grid gap-4">
+                <li class="flex items-center gap-4"><ion-icon size="large" name="checkmark"></ion-icon>Autoya offers a seamless way to find and rent the perfect vehicle for your journey</li>
+                <li class="flex items-center gap-4"><ion-icon size="large" name="checkmark"></ion-icon>Choose from a wide range of cars, from compact to luxury, to suit your preferences and budget</li>
+                <li class="flex items-center gap-4"><ion-icon size="large" name="checkmark"></ion-icon>Enjoy the convenience of booking, managing, and reviewing your rental experience all within the Autoya platform</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-secondary-light">
+        <div class="container mx-auto py-16 px-8">
+          <div class="grid lg:flex gap-16 text-center justify-between">
+            <div class="flex flex-col gap-8 items-center justify-center">
+                <h1 class="font-semibold text-2xl">1. Find your <span class="text-contrast font-bold">Perfect Car</span></h1>
+                <img src="./assets/car11.png" alt="Search for a Car image" class="h-56 w-70 object-contain" />
+                <p class="text-xl">Choose from a variety of cars with different models, sizes, and features</p>
+            </div>
+            <div class="flex flex-col gap-8 items-center justify-center">
+                <h1 class="font-semibold text-2xl">2. Book and Communicate</h1>
+                <img src="./assets/res.jpg" alt="Book and Communicate image" class="h-56 w-56 object-cover" />
+                <p class="text-xl">Book your car rental and communicate with the rental provider to discuss details and arrangements</p>
+            </div>
+            <div class="flex flex-col gap-8 items-center justify-center">
+                <h1 class="font-semibold text-2xl">3. Rate Your Experience</h1>
+                <img src="./assets/cal.avif" alt="Rate Your Experience image" class="h-56 w-70 object-cover" />
+                <p class="text-xl">Share your feedback and rate your car rental experience to help others make informed decisions</p>
+            </div>
+        </div>        
+        </div>
+      </div>
+    </section>
+    <section id="available-countries-section">
+      <div class="container mx-auto px-8 py-20">
+        <div class="lg:flex flex-row gap-8 md:gap-20 items-start justify-center">
+          <div class="flex flex-col items-center">
+            <div class="grid gap-2 py-8 text-center md:text-start">
+              <h1 class="text-4xl md:text-5xl font-bold text-primary" style="color: red;">Countries available</h1>
+              <p class="text-xl">We are working to bring AutoYa to the world.</p>
+            </div>
+            <img src="./assets/globe.png" alt="How it works image" class="hidden lg:block h-64 w-auto">
+          </div>
+          <div class="flex gap-8 md:gap-24 items-center md:items-start justify-center">
+            <div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover text-center">South America</h1>
+                <ul class="text-xl text-center">
+                  <li>Peru</li>
+                  <li>Chile</li>
+                  <li>Bolivia</li>
+                  <li>Argentina</li>
+                  <li>Brazil</li>
+                </ul>
+              </div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">North America</h1>
+                <ul class="text-xl text-center">
+                  <li>Canada</li>
+                  <li>Mexico</li>
+                  <li>United States</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">Europe</h1>
+                <ul class="text-xl text-center">
+                  <li>France</li>
+                  <li>Germany</li>
+                  <li>Italy</li>
+                  <li>Spain</li>
+                </ul>
+              </div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">Africa</h1>
+                <p class="text-xl text-center">Coming soon</p>
+              </div>
+              <div class="grid gap-2 my-6">
+                <h1 class="uppercase btn-filled-no-hover">Asia</h1>
+                <p class="text-xl text-center">Coming soon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="reviews-section" class="bg-secondary-light">
+      <div class="container mx-auto px-8 py-20">
+          <div class="grid gap-2 text-center lg:text-start">
+              <h1 class="text-4xl md:text-5xl font-bold text-primary" style="color: red;">What our users say about AutoYa</h1>
+              <p class="text-xl">Discover why our customers love renting with AutoYa</p>
+          </div>
+          <div class="hidden lg:grid lg:grid-cols-2 gap-8 mt-16">
+              <div id="user-review" class="flex gap-8 md:py-4">
+                  <img src="./assets/user-1.png" alt="Reviewer profile picture" class="h-16" />
+                  <div>
+                      <div class="flex gap-4 items-center">
+                          <h1 class="text-xl font-bold">John Nick</h1>
+                          <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                          </div>
+                      </div>
+                      <p>"Renting a car through AutoYa was a breeze! The process was smooth, the vehicle was in great
+                          condition, and the customer service was excellent. I highly recommend AutoYa for all your car rental
+                          needs."</p>
+                  </div>
+              </div>
+              <div id="user-review" class="flex gap-8 md:py-4">
+                  <img src="./assets/user-2.png" alt="Reviewer profile picture" class="h-16" />
+                  <div>
+                      <div class="flex gap-4 items-center">
+                          <h1 class="text-xl font-bold">Mary Brown</h1>
+                          <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                          </div>
+                      </div>
+                      <p>"I rented a car for a weekend trip with AutoYa and it was a fantastic experience. The booking
+                          process was simple, the car was clean and comfortable, and the rates were very reasonable. I will
+                          definitely be using AutoYa again in the future."</p>
+                  </div>
+              </div>
+              <div id="user-review" class="flex gap-8 md:py-4">
+                  <img src="./assets/user-3.png" alt="Reviewer profile picture" class="h-16" />
+                  <div>
+                      <div class="flex gap-4 items-center">
+                          <h1 class="text-xl font-bold">Susan Jones</h1>
+                          <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                          </div>
+                      </div>
+                      <p>"AutoYa made renting a car so easy and convenient. The selection of vehicles was impressive, the
+                          booking process was straightforward, and the customer support was top-notch. I highly recommend
+                          AutoYa to anyone in need of a reliable car rental service."</p>
+                  </div>
+              </div>
+              <div id="user-review" class="flex gap-8 md:py-4">
+                  <img src="./assets/user-4.png" alt="Reviewer profile picture" class="h-16" />
+                  <div>
+                      <div class="flex gap-4 items-center">
+                          <h1 class="text-xl font-bold">David Williams</h1>
+                          <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                              <ion-icon name="star"></ion-icon>
+                          </div>
+                      </div>
+                      <p>"I've rented with AutoYa multiple times and have always been impressed with their service. The
+                          process is quick and easy, the cars are clean and well-maintained, and the prices are competitive.
+                          I wouldn't hesitate to recommend AutoYa to friends and family."</p>
+                  </div>
+              </div>
+          </div>
+          <div id="default-carousel" class="relative w-full lg:hidden" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-[400px] overflow-hidden rounded-lg">
+                  <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <div id="user-review"
+                          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                          <div class="flex flex-col items-center text-center py-4">
+                              <img src="./assets/user-1.png" alt="Reviewer profile picture" class="h-16" />
+                              <h1 class="text-xl font-bold">Jhon Nick</h1>
+                              <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                              </div>
+                          </div>
+                          <p class="text-center text-lg">"Renting a car through AutoYa was a breeze! The process was smooth,
+                              the vehicle was in great condition, and the customer service was excellent. I highly recommend
+                              AutoYa for all your car rental needs."</p>
+                      </div>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <div id="user-review"
+                          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                          <div class="flex flex-col items-center text-center py-4">
+                              <img src="./assets/user-2.png" alt="Reviewer profile picture" class="h-16" />
+                              <h1 class="text-xl font-bold">Mary Brown</h1>
+                              <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                              </div>
+                          </div>
+                          <p class="text-center text-lg">"I rented a car for a weekend trip with AutoYa and it was a
+                              fantastic experience. The booking process was simple, the car was clean and comfortable, and
+                              the rates were very reasonable. I will definitely be using AutoYa again in the future."</p>
+                      </div>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <div id="user-review"
+                          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                          <div class="flex flex-col items-center text-center py-4">
+                              <img src="./assets/user-3.png" alt="Reviewer profile picture" class="h-16" />
+                              <h1 class="text-xl font-bold">Susan Jones</h1>
+                              <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                              </div>
+                          </div>
+                          <p class="text-center text-lg">"AutoYa made renting a car so easy and convenient. The selection of
+                              vehicles was impressive, the booking process was straightforward, and the customer support was
+                              top-notch. I highly recommend AutoYa to anyone in need of a reliable car rental service."</p>
+                      </div>
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <div id="user-review"
+                          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 py-8">
+                          <div class="flex flex-col items-center text-center py-4">
+                              <img src="./assets/user-4.png" alt="Reviewer profile picture" class="h-16" />
+                              <h1 class="text-xl font-bold">David Williams</h1>
+                              <div class="flex gap-2 items-center text-contrast text-md lg:text-xl">
+                                  <ion-icon name="star" size="large"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                                  <ion-icon name="star"></ion-icon>
+                              </div>
+                          </div>
+                          <p class="text-center text-lg">"I've rented with AutoYa multiple times and have always been impressed
+                              with their service. The process is quick and easy, the cars are clean and well-maintained, and
+                              the prices are competitive. I wouldn't hesitate to recommend AutoYa to friends and family."</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    <section id="about-section">
+      <div class="container mx-auto grid md:grid-cols-2 px-8  items-start">
+        <div class="items-center justify-center text-center py-16">
+          <div class="space-y-6">
+            <div>
+              <h1 class="font-bold text-3xl lg:text-4xl" style="color: red;">About the Product</h1>
+              <p class="text-lg">
+                Check what <span class="text-contrast font-bold">AutoYa</span> has to offer!
+              </p>
+              <video src="" style="border: 2px solid rgb(235, 8, 8);" width="80%"></video>
+            </div>
+           
+          </div>
+        </div>
+        <div class="items-center justify-center text-center py-16">
+          <div class="space-y-6">
+            <div>
+              <h1 class="font-bold text-3xl lg:text-4xl" style="color: red;">About the Team</h1>
+              <p class="text-lg">
+                Check
+                <a class="text-contrast font-bold underline"
+                  href="#" target="_blank">NewMinds</a>
+                organization on Github!
+              </p>
+              <video src="" style="border: 2px solid rgb(235, 8, 8);" width="80%"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download-section">
+      <section class="bg-gray-200 py-12">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-20 py-5">
+          <div class="md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
+            <img src="./assets/cap2.png" alt="ready image"
+              class=" mx-auto w-72 h-auto rounded-lg mb-4 md:mb-0 border" />
+          </div>
+
+          <div class="md:w-1/2 text-center md:text-left md:pr-8">
+            <h2 class="text-4xl font-bold mb-4 " style="color: red;">
+                Ready to Rent with AutoYa?
+            </h2>
+            <p class="text-lg mb-6">
+                Start now and find the perfect rental car for your needs. <br />Available whenever you need it!
+            </p>
+            <ul class="list-none list-inside font-semibold">
+                <li class="mb-2 flex items-center">
+                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                        </path>
+                    </svg>
+                    Wide variety of car categories
+                </li>
+                <li class="mb-2 flex items-center">
+                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                        </path>
+                    </svg>
+                    Renters from around the world
+                </li>
+                <li class="mb-2 flex items-center">
+                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                        </path>
+                    </svg>
+                    Reviews and ratings for each rental
+                </li>
+                <li class="mb-2 flex items-center">
+                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                        </path>
+                    </svg>
+                    In-platform messaging for easy communication
+                </li>
+                <li class="mb-2 flex items-center">
+                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.293 10.293a1 1 0 011.414 0L12 15.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z">
+                        </path>
+                    </svg>
+                    24/7 customer support
+                </li>
+            </ul>
+        </div>            
+      </section>
+    </section>
+    <section id="become-favorer-section">
+      <section class="bg-secondary-light py-12">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-20 py-5">
+          <div class="md:w-1/2 text-center md:text-left md:pr-8">
+            <h2 class="text-4xl font-bold mb-4 " style="color: red;">
+              Become a AutoYa!
+            </h2>
+            <p class="text-lg mb-6">
+              Download the app and sign up to apply to become a favorer! Start
+              earning by offering a service you can provide. <br />
+              <a class="text-contrast underline" href="">Terms and conditions.</a>
+            </p>
+            <a href="#">
+              <div class="flex items-center justify-center">
+                <img src="./assets/google-play-badge.png" alt="Google Play Store Badge"
+                  class="h-16 w-auto mx-auto md:ml-0 hover:scale-95 duration-200 py-2" />
+              </div>
+            </a>
+          </div>
+          <div class="md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
+            <img src="./assets/mu4.webp" alt="favorer image"
+              class="w-full mx-auto max-w-full h-auto rounded-lg" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="text-white bg-gray-800 py-12 px-20">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-1">
+            <img src="./assets/logo.png" alt="AutoYa logo" class="h-16" />
+          </div>
+          <div class="md:col-span-1 font-medium">
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#about-section">About The Product</a>          
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#about-section">About The Team</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#how-it-works-section">How It Works</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#available-countries-section">Available countries</a>
+            </div>
+          </div>
+          <div class="md:col-span-1 font-medium">
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#reviews-section">Reviews</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#download-section">Downloads</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#become-favorer-section">Become a Favorer</a>
+            </div>
+            <div class="mb-4 transition-colors hover:text-primary hover:cursor-pointer">
+              <a href="#">Terms and conditions</a>
+            </div>
+          </div>
+          <div class="md:col-span-1">
+            <p class="mb-4">
+              <span class="font-bold text-primary"> DOWNLOAD FAVORE</span>
+              <br />
+              <span class="font-medium">
+                Available in Google Play Store, available soon on the App
+                Store.
+              </span>
+              <span class="text-contrast underline" href="">Check for updates</span>
+            </p>
+            <a href="#">
+              <img src="./assets/google-play-badge.png" alt="Google Play Store Badge"
+              class="h-16 w-auto hover:scale-95 duration-200 py-2" />
+            </a>
+            <div class="mb-4 font-bold">Follow us!</div>
+            <div class="flex space-x-4">
+              <a href="#"><img class="h-8" src="./assets/facebook-logo.png" alt="Facebook" /></a>
+              <a href="#"><img class="h-8" src="./assets/twitter-logo.png" alt="Twitter" /></a>
+              <a href="#"><img class="h-8" src="./assets/instagram-logo.png" alt="Instagram" /></a>
+              <a href="#"><img class="h-8" src="./assets/youtube-logo.png" alt="Youtube" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="text-align: center;">&copy; 2024 AutoYa. Todos los derechos reservados.</p>
+    </footer>
+  </main>
+  <script src="./scripts/navigation.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
